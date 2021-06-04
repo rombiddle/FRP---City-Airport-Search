@@ -9,17 +9,18 @@
 /* Begin PBXBuildFile section */
 		253B2E21266A20580082D9F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253B2E20266A20580082D9F3 /* AppDelegate.swift */; };
 		253B2E23266A20580082D9F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253B2E22266A20580082D9F3 /* SceneDelegate.swift */; };
-		253B2E25266A20580082D9F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253B2E24266A20580082D9F3 /* ViewController.swift */; };
+		253B2E25266A20580082D9F3 /* SearchCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253B2E24266A20580082D9F3 /* SearchCityViewController.swift */; };
 		253B2E28266A20580082D9F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 253B2E26266A20580082D9F3 /* Main.storyboard */; };
 		253B2E2A266A20590082D9F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 253B2E29266A20590082D9F3 /* Assets.xcassets */; };
 		253B2E2D266A20590082D9F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 253B2E2B266A20590082D9F3 /* LaunchScreen.storyboard */; };
 		253B2E38266A205A0082D9F3 /* CityAirportSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253B2E37266A205A0082D9F3 /* CityAirportSearchTests.swift */; };
 		253B2E43266A205A0082D9F3 /* CityAirportSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253B2E42266A205A0082D9F3 /* CityAirportSearchUITests.swift */; };
-		253B2E55266A25590082D9F3 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 253B2E54266A25590082D9F3 /* RxSwift */; };
-		253B2E57266A25590082D9F3 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 253B2E56266A25590082D9F3 /* RxTest */; };
-		253B2E59266A25590082D9F3 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 253B2E58266A25590082D9F3 /* RxRelay */; };
-		253B2E5B266A25590082D9F3 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 253B2E5A266A25590082D9F3 /* RxCocoa */; };
-		253B2E5D266A25590082D9F3 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 253B2E5C266A25590082D9F3 /* RxBlocking */; };
+		253B2E68266A54CB0082D9F3 /* SearchCityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253B2E67266A54CB0082D9F3 /* SearchCityViewModel.swift */; };
+		253B2E74266A58AF0082D9F3 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 253B2E73266A58AF0082D9F3 /* RxSwift */; };
+		253B2E76266A58AF0082D9F3 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 253B2E75266A58AF0082D9F3 /* RxTest */; };
+		253B2E78266A58AF0082D9F3 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 253B2E77266A58AF0082D9F3 /* RxRelay */; };
+		253B2E7A266A58AF0082D9F3 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 253B2E79266A58AF0082D9F3 /* RxCocoa */; };
+		253B2E7C266A58AF0082D9F3 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 253B2E7B266A58AF0082D9F3 /* RxBlocking */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +44,7 @@
 		253B2E1D266A20580082D9F3 /* CityAirportSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityAirportSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		253B2E20266A20580082D9F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		253B2E22266A20580082D9F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		253B2E24266A20580082D9F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		253B2E24266A20580082D9F3 /* SearchCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityViewController.swift; sourceTree = "<group>"; };
 		253B2E27266A20580082D9F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		253B2E29266A20590082D9F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		253B2E2C266A20590082D9F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +55,7 @@
 		253B2E3E266A205A0082D9F3 /* CityAirportSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CityAirportSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		253B2E42266A205A0082D9F3 /* CityAirportSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityAirportSearchUITests.swift; sourceTree = "<group>"; };
 		253B2E44266A205A0082D9F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		253B2E67266A54CB0082D9F3 /* SearchCityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +63,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				253B2E59266A25590082D9F3 /* RxRelay in Frameworks */,
-				253B2E57266A25590082D9F3 /* RxTest in Frameworks */,
-				253B2E5B266A25590082D9F3 /* RxCocoa in Frameworks */,
-				253B2E55266A25590082D9F3 /* RxSwift in Frameworks */,
-				253B2E5D266A25590082D9F3 /* RxBlocking in Frameworks */,
+				253B2E7A266A58AF0082D9F3 /* RxCocoa in Frameworks */,
+				253B2E78266A58AF0082D9F3 /* RxRelay in Frameworks */,
+				253B2E74266A58AF0082D9F3 /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				253B2E76266A58AF0082D9F3 /* RxTest in Frameworks */,
+				253B2E7C266A58AF0082D9F3 /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,7 +113,8 @@
 			children = (
 				253B2E20266A20580082D9F3 /* AppDelegate.swift */,
 				253B2E22266A20580082D9F3 /* SceneDelegate.swift */,
-				253B2E24266A20580082D9F3 /* ViewController.swift */,
+				253B2E24266A20580082D9F3 /* SearchCityViewController.swift */,
+				253B2E67266A54CB0082D9F3 /* SearchCityViewModel.swift */,
 				253B2E26266A20580082D9F3 /* Main.storyboard */,
 				253B2E29266A20590082D9F3 /* Assets.xcassets */,
 				253B2E2B266A20590082D9F3 /* LaunchScreen.storyboard */,
@@ -155,11 +158,9 @@
 			);
 			name = CityAirportSearch;
 			packageProductDependencies = (
-				253B2E54266A25590082D9F3 /* RxSwift */,
-				253B2E56266A25590082D9F3 /* RxTest */,
-				253B2E58266A25590082D9F3 /* RxRelay */,
-				253B2E5A266A25590082D9F3 /* RxCocoa */,
-				253B2E5C266A25590082D9F3 /* RxBlocking */,
+				253B2E73266A58AF0082D9F3 /* RxSwift */,
+				253B2E77266A58AF0082D9F3 /* RxRelay */,
+				253B2E79266A58AF0082D9F3 /* RxCocoa */,
 			);
 			productName = CityAirportSearch;
 			productReference = 253B2E1D266A20580082D9F3 /* CityAirportSearch.app */;
@@ -179,6 +180,10 @@
 				253B2E35266A205A0082D9F3 /* PBXTargetDependency */,
 			);
 			name = CityAirportSearchTests;
+			packageProductDependencies = (
+				253B2E75266A58AF0082D9F3 /* RxTest */,
+				253B2E7B266A58AF0082D9F3 /* RxBlocking */,
+			);
 			productName = CityAirportSearchTests;
 			productReference = 253B2E33266A205A0082D9F3 /* CityAirportSearchTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -233,7 +238,7 @@
 			);
 			mainGroup = 253B2E14266A20580082D9F3;
 			packageReferences = (
-				253B2E53266A25590082D9F3 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				253B2E72266A58AF0082D9F3 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 253B2E1E266A20580082D9F3 /* Products */;
 			projectDirPath = "";
@@ -278,9 +283,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				253B2E25266A20580082D9F3 /* ViewController.swift in Sources */,
+				253B2E25266A20580082D9F3 /* SearchCityViewController.swift in Sources */,
 				253B2E21266A20580082D9F3 /* AppDelegate.swift in Sources */,
 				253B2E23266A20580082D9F3 /* SceneDelegate.swift in Sources */,
+				253B2E68266A54CB0082D9F3 /* SearchCityViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +463,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_TESTING_SEARCH_PATHS = NO;
 				INFOPLIST_FILE = CityAirportSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -475,6 +482,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_TESTING_SEARCH_PATHS = NO;
 				INFOPLIST_FILE = CityAirportSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -609,7 +617,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		253B2E53266A25590082D9F3 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+		253B2E72266A58AF0082D9F3 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
 			requirement = {
@@ -620,29 +628,29 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		253B2E54266A25590082D9F3 /* RxSwift */ = {
+		253B2E73266A58AF0082D9F3 /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 253B2E53266A25590082D9F3 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 253B2E72266A58AF0082D9F3 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
 		};
-		253B2E56266A25590082D9F3 /* RxTest */ = {
+		253B2E75266A58AF0082D9F3 /* RxTest */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 253B2E53266A25590082D9F3 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 253B2E72266A58AF0082D9F3 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxTest;
 		};
-		253B2E58266A25590082D9F3 /* RxRelay */ = {
+		253B2E77266A58AF0082D9F3 /* RxRelay */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 253B2E53266A25590082D9F3 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 253B2E72266A58AF0082D9F3 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxRelay;
 		};
-		253B2E5A266A25590082D9F3 /* RxCocoa */ = {
+		253B2E79266A58AF0082D9F3 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 253B2E53266A25590082D9F3 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 253B2E72266A58AF0082D9F3 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
 		};
-		253B2E5C266A25590082D9F3 /* RxBlocking */ = {
+		253B2E7B266A58AF0082D9F3 /* RxBlocking */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 253B2E53266A25590082D9F3 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 253B2E72266A58AF0082D9F3 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxBlocking;
 		};
 /* End XCSwiftPackageProductDependency section */
