@@ -21,9 +21,11 @@ class SearchCityViewController: UIViewController {
     private let disposeBag = DisposeBag()
     
     private lazy var dataSource = RxTableViewSectionedReloadDataSource<SectionOfCustomData> { (_, tableView, indexPath, item) -> UITableViewCell in
-        let cell = UITableViewCell()
-        cell.textLabel?.text = item.city
-        return cell
+        if let cityCell = tableView.dequeueReusableCell(withIdentifier: "CityCellTableViewCell", for: indexPath) as? CityCellTableViewCell {
+            cityCell.configure(with: CityCellViewModel(city: item.city, location: item.country))
+            return cityCell
+        }
+        return UITableViewCell()
     }
 
     override func viewDidLoad() {
@@ -34,6 +36,11 @@ class SearchCityViewController: UIViewController {
         viewModel = SearchCityViewModel(client: loader)
         bindViewModelInputs()
         bindViewModelOuputs()
+        setupTableView()
+    }
+    
+    private func setupTableView() {
+        tableView.register(UINib(nibName: "CityCellTableViewCell", bundle: nil), forCellReuseIdentifier: "CityCellTableViewCell")
     }
     
     private func bindViewModelInputs() {
