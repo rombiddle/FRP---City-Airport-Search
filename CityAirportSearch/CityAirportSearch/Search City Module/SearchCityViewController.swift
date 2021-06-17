@@ -22,8 +22,8 @@ class SearchCityViewController: UIViewController {
     var loader: AirportsLoader?
     
     private lazy var dataSource = RxTableViewSectionedReloadDataSource<SectionOfCustomData> { (_, tableView, indexPath, item) -> UITableViewCell in
-        if let cityCell = tableView.dequeueReusableCell(withIdentifier: "CityCellTableViewCell", for: indexPath) as? CityCellTableViewCell {
-            cityCell.configure(with: CityCellViewModel(city: item.city, location: item.country))
+        if let cityCell = tableView.dequeueReusableCell(withIdentifier: "CityTableViewCell", for: indexPath) as? CityTableViewCell {
+            cityCell.configure(with: CityTableViewModel(city: item.city, location: item.country))
             return cityCell
         }
         return UITableViewCell()
@@ -37,7 +37,7 @@ class SearchCityViewController: UIViewController {
     }
     
     private func setupTableView() {
-        tableView.register(UINib(nibName: "CityCellTableViewCell", bundle: nil), forCellReuseIdentifier: "CityCellTableViewCell")
+        tableView.register(UINib(nibName: "CityTableViewCell", bundle: nil), forCellReuseIdentifier: "CityTableViewCell")
     }
     
     private func bindViewModelInputs() {

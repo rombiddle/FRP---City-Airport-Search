@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CityCellViewModel {
+struct CityTableViewModel {
     let city: String
     let location: String
 }

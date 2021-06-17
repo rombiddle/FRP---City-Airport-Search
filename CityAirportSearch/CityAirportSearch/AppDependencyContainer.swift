@@ -18,6 +18,7 @@ final class AppDependencyContainer {
         nav.navigationBar.setBackgroundImage(UIImage(), for: .default)
         nav.navigationBar.shadowImage = UIImage()
         nav.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        nav.navigationBar.tintColor = .white
         return nav
     }()
 
