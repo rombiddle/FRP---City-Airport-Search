@@ -37,8 +37,9 @@ final class AppDependencyContainer {
         return nav
     }
     
-    private func showAirports(for citySelected: [Airport]) {
+    private func showAirports(for airports: [Airport]) {
         let airportsViewController = AirportsViewController.make()
+        airportsViewController.airports.accept(airports)
         nav.pushViewController(airportsViewController, animated: true)
     }
 }

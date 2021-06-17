@@ -8,16 +8,22 @@
 import UIKit
 
 class AirportTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var airportName: UILabel!
+    @IBOutlet weak var city: UILabel!
+    @IBOutlet weak var country: UILabel!
+    @IBOutlet weak var geolocation: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func configure(with viewModel: AirportTableViewModel) {
+        airportName.text = viewModel.airportName
+        city.text = viewModel.city
+        country.text = viewModel.country
+        geolocation.text = viewModel.geolocation
     }
     
 }

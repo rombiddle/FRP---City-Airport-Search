@@ -147,8 +147,8 @@
 		2522E91B2679D6F8005D2115 /* Airports Module */ = {
 			isa = PBXGroup;
 			children = (
-				2522E91C2679D720005D2115 /* AirportsViewController.swift */,
 				2522EC25267B2EFB005D2115 /* Cell */,
+				2522E91C2679D720005D2115 /* AirportsViewController.swift */,
 				2522E9292679D86C005D2115 /* AirportsViewModel.swift */,
 				2522E9242679D734005D2115 /* Airports.storyboard */,
 			);
@@ -158,8 +158,8 @@
 		2522EC25267B2EFB005D2115 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				2522EC2E267B2F7B005D2115 /* AirportTableViewCell.swift */,
 				2522EC35267B2F8F005D2115 /* AirportTableViewModel.swift */,
+				2522EC2E267B2F7B005D2115 /* AirportTableViewCell.swift */,
 				2522EC2F267B2F7B005D2115 /* AirportTableViewCell.xib */,
 			);
 			path = Cell;

@@ -6,15 +6,40 @@
 //
 
 import UIKit
+import RxRelay
+import RxCocoa
+import RxSwift
+import RxDataSources
 
 class AirportsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    var airports = BehaviorRelay<[Airport]>(value: [])
+    private let disposeBag = DisposeBag()
+    
+    private lazy var dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, Airport>> { (_, tableView, indexPath, item) -> UITableViewCell in
+        if let airportCell = tableView.dequeueReusableCell(withIdentifier: "AirportTableViewCell", for: indexPath) as? AirportTableViewCell {
+            airportCell.configure(with: AirportTableViewModel(airportName: item.name, city: item.city, country: item.country, geolocation: "\(item._geoloc.lng), \(item._geoloc.lat)"))
+            return airportCell
+        }
+        return UITableViewCell()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupTableView()
+        
+        airports
+            .asDriver()
+            .map({ airports in
+                [SectionModel(model: "", items: airports)]
+            })
+            .drive(tableView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
+    }
+    
+    private func setupTableView() {
+        tableView.register(UINib(nibName: "AirportTableViewCell", bundle: nil), forCellReuseIdentifier: "AirportTableViewCell")
     }
 
 }

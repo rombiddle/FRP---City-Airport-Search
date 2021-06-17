@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct AirportTableViewModel {
+    let airportName: String
+    let city: String
+    let country: String
+    let geolocation: String
+}
