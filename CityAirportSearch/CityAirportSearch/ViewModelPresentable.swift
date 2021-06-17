@@ -1,5 +1,5 @@
 //
-//  SearchCityViewPresentable.swift
+//  ViewModelPresentable.swift
 //  CityAirportSearch
 //
 //  Created by Romain Brunie on 08/06/2021.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol SearchCityViewPresentable {
+protocol ViewModelPresentable {
     associatedtype Input
     associatedtype Output
     

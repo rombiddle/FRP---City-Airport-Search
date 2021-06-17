@@ -12,8 +12,8 @@
 		2522E91D2679D720005D2115 /* AirportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2522E91C2679D720005D2115 /* AirportsViewController.swift */; };
 		2522E9252679D734005D2115 /* Airports.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2522E9242679D734005D2115 /* Airports.storyboard */; };
 		2522E92A2679D86C005D2115 /* AirportsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2522E9292679D86C005D2115 /* AirportsViewModel.swift */; };
-		2522EAFE267A1896005D2115 /* AirportsViewPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2522EAFD267A1895005D2115 /* AirportsViewPresentable.swift */; };
 		2522EC0C267A5753005D2115 /* AppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2522EC0B267A5753005D2115 /* AppDependencyContainer.swift */; };
+		2522EC17267B2B50005D2115 /* CityCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2522EC16267B2B50005D2115 /* CityCellViewModel.swift */; };
 		253B2E21266A20580082D9F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253B2E20266A20580082D9F3 /* AppDelegate.swift */; };
 		253B2E23266A20580082D9F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253B2E22266A20580082D9F3 /* SceneDelegate.swift */; };
 		253B2E25266A20580082D9F3 /* SearchCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253B2E24266A20580082D9F3 /* SearchCityViewController.swift */; };
@@ -38,7 +38,7 @@
 		25C28256266F49EB00787B07 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C28255266F49EB00787B07 /* HTTPClient.swift */; };
 		25C28269266F4C4200787B07 /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C28268266F4C4200787B07 /* Airport.swift */; };
 		25C28275266F4C8E00787B07 /* Geoloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C28274266F4C8E00787B07 /* Geoloc.swift */; };
-		25C2827A266F4CA700787B07 /* SearchCityViewPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C28279266F4CA700787B07 /* SearchCityViewPresentable.swift */; };
+		25C2827A266F4CA700787B07 /* ViewModelPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C28279266F4CA700787B07 /* ViewModelPresentable.swift */; };
 		25C2827F266F50E400787B07 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C2827E266F50E400787B07 /* URLSessionHTTPClient.swift */; };
 		25C289892671F0E700787B07 /* SectionOfCustomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C289882671F0E600787B07 /* SectionOfCustomData.swift */; };
 /* End PBXBuildFile section */
@@ -66,8 +66,8 @@
 		2522E91C2679D720005D2115 /* AirportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsViewController.swift; sourceTree = "<group>"; };
 		2522E9242679D734005D2115 /* Airports.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Airports.storyboard; sourceTree = "<group>"; };
 		2522E9292679D86C005D2115 /* AirportsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsViewModel.swift; sourceTree = "<group>"; };
-		2522EAFD267A1895005D2115 /* AirportsViewPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsViewPresentable.swift; sourceTree = "<group>"; };
 		2522EC0B267A5753005D2115 /* AppDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencyContainer.swift; sourceTree = "<group>"; };
+		2522EC16267B2B50005D2115 /* CityCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCellViewModel.swift; sourceTree = "<group>"; };
 		253B2E1D266A20580082D9F3 /* CityAirportSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityAirportSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		253B2E20266A20580082D9F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		253B2E22266A20580082D9F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 		25C28255266F49EB00787B07 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		25C28268266F4C4200787B07 /* Airport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
 		25C28274266F4C8E00787B07 /* Geoloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geoloc.swift; sourceTree = "<group>"; };
-		25C28279266F4CA700787B07 /* SearchCityViewPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityViewPresentable.swift; sourceTree = "<group>"; };
+		25C28279266F4CA700787B07 /* ViewModelPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelPresentable.swift; sourceTree = "<group>"; };
 		25C2827E266F50E400787B07 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		25C289882671F0E600787B07 /* SectionOfCustomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionOfCustomData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				2522E7182678F140005D2115 /* CityCellTableViewCell.swift */,
+				2522EC16267B2B50005D2115 /* CityCellViewModel.swift */,
 				2522E7192678F140005D2115 /* CityCellTableViewCell.xib */,
 			);
 			path = Cell;
@@ -142,7 +143,6 @@
 			children = (
 				2522E91C2679D720005D2115 /* AirportsViewController.swift */,
 				2522E9292679D86C005D2115 /* AirportsViewModel.swift */,
-				2522EAFD267A1895005D2115 /* AirportsViewPresentable.swift */,
 				2522E9242679D734005D2115 /* Airports.storyboard */,
 			);
 			path = "Airports Module";
@@ -174,6 +174,7 @@
 				253B2E20266A20580082D9F3 /* AppDelegate.swift */,
 				253B2E22266A20580082D9F3 /* SceneDelegate.swift */,
 				2522EC0B267A5753005D2115 /* AppDependencyContainer.swift */,
+				25C28279266F4CA700787B07 /* ViewModelPresentable.swift */,
 				2522E91B2679D6F8005D2115 /* Airports Module */,
 				25C28264266F4A7A00787B07 /* Search City Module */,
 				25C2825D266F4A0B00787B07 /* Airports Feature */,
@@ -241,7 +242,6 @@
 				253B2E26266A20580082D9F3 /* Main.storyboard */,
 				253B2E24266A20580082D9F3 /* SearchCityViewController.swift */,
 				253B2E67266A54CB0082D9F3 /* SearchCityViewModel.swift */,
-				25C28279266F4CA700787B07 /* SearchCityViewPresentable.swift */,
 			);
 			path = "Search City Module";
 			sourceTree = "<group>";
@@ -403,6 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25C2822F266E3AC300787B07 /* AirportsLoader.swift in Sources */,
+				2522EC17267B2B50005D2115 /* CityCellViewModel.swift in Sources */,
 				253B2E25266A20580082D9F3 /* SearchCityViewController.swift in Sources */,
 				2522EC0C267A5753005D2115 /* AppDependencyContainer.swift in Sources */,
 				2522E71A2678F140005D2115 /* CityCellTableViewCell.swift in Sources */,
@@ -415,9 +416,8 @@
 				25C28256266F49EB00787B07 /* HTTPClient.swift in Sources */,
 				25C2827F266F50E400787B07 /* URLSessionHTTPClient.swift in Sources */,
 				25C28243266F49A700787B07 /* RemoteGeoloc.swift in Sources */,
-				2522EAFE267A1896005D2115 /* AirportsViewPresentable.swift in Sources */,
 				25C28275266F4C8E00787B07 /* Geoloc.swift in Sources */,
-				25C2827A266F4CA700787B07 /* SearchCityViewPresentable.swift in Sources */,
+				25C2827A266F4CA700787B07 /* ViewModelPresentable.swift in Sources */,
 				2522E91D2679D720005D2115 /* AirportsViewController.swift in Sources */,
 				25C28269266F4C4200787B07 /* Airport.swift in Sources */,
 				253B2E68266A54CB0082D9F3 /* SearchCityViewModel.swift in Sources */,

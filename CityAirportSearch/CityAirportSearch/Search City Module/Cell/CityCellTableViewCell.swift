@@ -7,11 +7,6 @@
 
 import UIKit
 
-struct CityCellViewModel {
-    let city: String
-    let location: String
-}
-
 class CityCellTableViewCell: UITableViewCell {
     
     @IBOutlet weak var cityLabel: UILabel!

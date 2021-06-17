@@ -9,7 +9,7 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-class SearchCityViewModel: SearchCityViewPresentable {
+class SearchCityViewModel: ViewModelPresentable {
     struct Input {
         let searchText: AnyObserver<String>
         let citySelect: AnyObserver<Airport>

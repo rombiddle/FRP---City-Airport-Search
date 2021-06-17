@@ -8,7 +8,7 @@
 import Foundation
 import RxSwift
 
-//struct AirportsViewModel: AirportsViewPresentable {
+//struct AirportsViewModel: ViewModelPresentable {
 //    struct Input {
 //        let searchText: AnyObserver<String>
 //    }
