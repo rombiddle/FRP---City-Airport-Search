@@ -12,6 +12,7 @@ import RxSwift
 class SearchCityViewModel: SearchCityViewPresentable {
     struct Input {
         let searchText: AnyObserver<String>
+        let citySelect: AnyObserver<Airport>
     }
     
     struct Output {
@@ -24,11 +25,14 @@ class SearchCityViewModel: SearchCityViewPresentable {
     private let disposeBag = DisposeBag()
     
     private let searchText = PublishSubject<String>()
+    private let citySelect = PublishSubject<Airport>()
     private var airports = BehaviorRelay<[Airport]>(value: [])
+    var citySelection: ([Airport]) -> Void
     
-    init(client: AirportsLoader) {
+    init(client: AirportsLoader, citySelection: @escaping ([Airport]) -> Void) {
         self.client = client
-        input = Input(searchText: searchText.asObserver())
+        self.citySelection = citySelection
+        input = Input(searchText: searchText.asObserver(), citySelect: citySelect.asObserver())
         output = Output(airportResult: airportSearch())
         
         client
@@ -41,6 +45,20 @@ class SearchCityViewModel: SearchCityViewPresentable {
                     self.airports.accept([])
                 }
             }
+            .disposed(by: disposeBag)
+        
+        citySelect
+            .asObservable()
+            .map({ $0.city })
+            .withLatestFrom(airports.asObservable()) { ($0, $1) }
+            .map { (city, airports) in
+                airports.filter({ $0.city == city })
+            }
+            .map({
+                citySelection($0)
+                print("Airports selected \($0)")
+            })
+            .subscribe()
             .disposed(by: disposeBag)
     }
     

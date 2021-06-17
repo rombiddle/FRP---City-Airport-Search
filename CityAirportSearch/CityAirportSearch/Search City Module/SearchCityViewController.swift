@@ -19,6 +19,7 @@ class SearchCityViewController: UIViewController {
     
     var viewModel: SearchCityViewModel!
     private let disposeBag = DisposeBag()
+    var loader: AirportsLoader?
     
     private lazy var dataSource = RxTableViewSectionedReloadDataSource<SectionOfCustomData> { (_, tableView, indexPath, item) -> UITableViewCell in
         if let cityCell = tableView.dequeueReusableCell(withIdentifier: "CityCellTableViewCell", for: indexPath) as? CityCellTableViewCell {
@@ -30,10 +31,6 @@ class SearchCityViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let client = URLSessionHTTPClient()
-        let url = URL(string: "https://raw.githubusercontent.com/rombiddle/FRP---City-Airport-Search/master/aiports.json")!
-        let loader = RemoteAirportsLoader(url: url, client: client)
-        viewModel = SearchCityViewModel(client: loader)
         bindViewModelInputs()
         bindViewModelOuputs()
         setupTableView()
@@ -49,6 +46,12 @@ class SearchCityViewController: UIViewController {
             .text
             .orEmpty
             .bind(to: viewModel.input.searchText)
+            .disposed(by: disposeBag)
+        
+        tableView
+            .rx
+            .modelSelected(Airport.self)
+            .bind(to: viewModel.input.citySelect)
             .disposed(by: disposeBag)
     }
     
