@@ -14,8 +14,9 @@ import RxDataSources
 class AirportsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    var airports = BehaviorRelay<[Airport]>(value: [])
+    var airports: [Airport]?
     private let disposeBag = DisposeBag()
+    var viewModel: AirportsViewModel!
     
     private lazy var dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, Airport>> { (_, tableView, indexPath, item) -> UITableViewCell in
         if let airportCell = tableView.dequeueReusableCell(withIdentifier: "AirportTableViewCell", for: indexPath) as? AirportTableViewCell {
@@ -28,18 +29,19 @@ class AirportsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        
-        airports
-            .asDriver()
-            .map({ airports in
-                [SectionModel(model: "", items: airports)]
-            })
-            .drive(tableView.rx.items(dataSource: dataSource))
-            .disposed(by: disposeBag)
+        bindViewModelOuputs()
     }
     
     private func setupTableView() {
         tableView.register(UINib(nibName: "AirportTableViewCell", bundle: nil), forCellReuseIdentifier: "AirportTableViewCell")
+    }
+    
+    private func bindViewModelOuputs() {
+        viewModel
+            .output
+            .airportResult
+            .drive(tableView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
     }
 
 }

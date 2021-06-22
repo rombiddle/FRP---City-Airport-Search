@@ -12,7 +12,7 @@ import RxDataSources
 
 struct AirportsViewModel: ViewModelPresentable {
     struct Input {
-        let airports: AnyObserver<[Airport]>
+        let airports: [Airport]
     }
     
     struct Output {
@@ -21,19 +21,15 @@ struct AirportsViewModel: ViewModelPresentable {
     
     private(set) var input: Input!
     private(set) var output: Output!
+    private let airports = PublishSubject<[Airport]>()
     
-    init() {
-        input = Input(searchText: searchText.asObserver())
+    init(airports: [Airport]) {
+        input = Input(airports: airports)
         output = Output(airportResult: airportResult())
     }
     
     private func airportResult() -> Driver<[SectionModel<String, Airport>]> {
-        airports
-            .asDriver()
-            .map({ airports in
-                [SectionModel(model: "", items: airports)]
-            })
-            .drive(tableView.rx.items(dataSource: dataSource))
-            .disposed(by: disposeBag)
+        Driver
+            .just([SectionModel(model: "", items: input.airports)])
     }
 }

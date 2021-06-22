@@ -39,7 +39,7 @@ final class AppDependencyContainer {
     
     private func showAirports(for airports: [Airport]) {
         let airportsViewController = AirportsViewController.make()
-        airportsViewController.airports.accept(airports)
+        airportsViewController.viewModel = AirportsViewModel(airports: airports)
         nav.pushViewController(airportsViewController, animated: true)
     }
 }
