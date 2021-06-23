@@ -64,6 +64,7 @@ class SearchCityViewModel: ViewModelPresentable {
     
     private func airportSearch() -> Driver<[SectionOfCustomData]> {
         searchText
+            .debounce(RxTimeInterval.milliseconds(500), scheduler: MainScheduler.instance)
             .asObservable()
             .map { city -> [Airport] in
                 self.airports.value.filter { airport -> Bool in

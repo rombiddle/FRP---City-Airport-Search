@@ -40,13 +40,18 @@
                                 <rect key="frame" x="0.0" y="164" width="414" height="698"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Ecv-XN-cis">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="z4f-GH-uFz" firstAttribute="top" secondItem="hXy-WL-zdS" secondAttribute="bottom" id="0C7-lF-j7T"/>
                             <constraint firstItem="hXy-WL-zdS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AIS-dY-iuR"/>
+                            <constraint firstItem="Ecv-XN-cis" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IJh-OM-AXt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="z4f-GH-uFz" secondAttribute="trailing" id="KnD-iN-PyU"/>
+                            <constraint firstItem="Ecv-XN-cis" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U1M-TC-Csj"/>
                             <constraint firstItem="z4f-GH-uFz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="b35-Iy-ylw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="hXy-WL-zdS" secondAttribute="top" id="cfX-Vx-wLL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="z4f-GH-uFz" secondAttribute="bottom" id="nd9-RD-REK"/>
@@ -54,6 +59,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="Ecv-XN-cis" id="dnJ-mj-9JR"/>
                         <outlet property="roundedView" destination="hXy-WL-zdS" id="fzA-G5-P4W"/>
                         <outlet property="searchTextField" destination="IlK-Ih-Bc7" id="Mul-wN-QBU"/>
                         <outlet property="tableView" destination="z4f-GH-uFz" id="huC-XC-kLB"/>

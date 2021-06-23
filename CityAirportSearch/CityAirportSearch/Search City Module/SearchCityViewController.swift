@@ -16,6 +16,7 @@ class SearchCityViewController: UIViewController {
     @IBOutlet weak var roundedView: UIView!
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var viewModel: SearchCityViewModel!
     private let disposeBag = DisposeBag()
@@ -60,6 +61,20 @@ class SearchCityViewController: UIViewController {
             .output
             .airportResult
             .drive(tableView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
+        
+        viewModel
+            .output
+            .airportResult
+            .map({ ($0.first?.items.isEmpty ?? true) })
+            .drive(activityIndicator.rx.isAnimating)
+            .disposed(by: disposeBag)
+        
+        viewModel
+            .output
+            .airportResult
+            .map({ !($0.first?.items.isEmpty ?? true) })
+            .drive(activityIndicator.rx.isHidden)
             .disposed(by: disposeBag)
     }
 
