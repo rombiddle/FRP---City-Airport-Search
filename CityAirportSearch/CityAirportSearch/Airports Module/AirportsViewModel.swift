@@ -29,7 +29,6 @@ struct AirportsViewModel: ViewModelPresentable {
     }
     
     private func airportResult() -> Driver<[SectionModel<String, Airport>]> {
-        Driver
-            .just([SectionModel(model: "", items: input.airports)])
+        Driver.just([SectionModel(model: "", items: input.airports)])
     }
 }

@@ -17,6 +17,10 @@
 		2522EC30267B2F7B005D2115 /* AirportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2522EC2E267B2F7B005D2115 /* AirportTableViewCell.swift */; };
 		2522EC31267B2F7B005D2115 /* AirportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2522EC2F267B2F7B005D2115 /* AirportTableViewCell.xib */; };
 		2522EC36267B2F8F005D2115 /* AirportTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2522EC35267B2F8F005D2115 /* AirportTableViewModel.swift */; };
+		2530DEB72681DB6F0093F9A9 /* URLSession+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2530DEB62681DB6E0093F9A9 /* URLSession+Rx.swift */; };
+		2530E3D226823D3A0093F9A9 /* URLSessionRxHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2530E3D126823D3A0093F9A9 /* URLSessionRxHTTPClient.swift */; };
+		2530E3DB26823FCF0093F9A9 /* RemoteRxAirportsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2530E3DA26823FCF0093F9A9 /* RemoteRxAirportsLoader.swift */; };
+		2530E3E326830AAB0093F9A9 /* RxHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2530E3E226830AAB0093F9A9 /* RxHTTPClient.swift */; };
 		253B2E21266A20580082D9F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253B2E20266A20580082D9F3 /* AppDelegate.swift */; };
 		253B2E23266A20580082D9F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253B2E22266A20580082D9F3 /* SceneDelegate.swift */; };
 		253B2E25266A20580082D9F3 /* SearchCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253B2E24266A20580082D9F3 /* SearchCityViewController.swift */; };
@@ -74,6 +78,10 @@
 		2522EC2E267B2F7B005D2115 /* AirportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportTableViewCell.swift; sourceTree = "<group>"; };
 		2522EC2F267B2F7B005D2115 /* AirportTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AirportTableViewCell.xib; sourceTree = "<group>"; };
 		2522EC35267B2F8F005D2115 /* AirportTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportTableViewModel.swift; sourceTree = "<group>"; };
+		2530DEB62681DB6E0093F9A9 /* URLSession+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Rx.swift"; sourceTree = "<group>"; };
+		2530E3D126823D3A0093F9A9 /* URLSessionRxHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionRxHTTPClient.swift; sourceTree = "<group>"; };
+		2530E3DA26823FCF0093F9A9 /* RemoteRxAirportsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteRxAirportsLoader.swift; sourceTree = "<group>"; };
+		2530E3E226830AAB0093F9A9 /* RxHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxHTTPClient.swift; sourceTree = "<group>"; };
 		253B2E1D266A20580082D9F3 /* CityAirportSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityAirportSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		253B2E20266A20580082D9F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		253B2E22266A20580082D9F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +173,17 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		2530E3D626823F2B0093F9A9 /* Rx */ = {
+			isa = PBXGroup;
+			children = (
+				2530DEB62681DB6E0093F9A9 /* URLSession+Rx.swift */,
+				2530E3DA26823FCF0093F9A9 /* RemoteRxAirportsLoader.swift */,
+				2530E3D126823D3A0093F9A9 /* URLSessionRxHTTPClient.swift */,
+				2530E3E226830AAB0093F9A9 /* RxHTTPClient.swift */,
+			);
+			path = Rx;
+			sourceTree = "<group>";
+		};
 		253B2E14266A20580082D9F3 = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +248,7 @@
 				25C28250266F49D600787B07 /* AirportsMapper.swift */,
 				25C2824B266F49C000787B07 /* RemoteAirportsLoader.swift */,
 				25C2827E266F50E400787B07 /* URLSessionHTTPClient.swift */,
+				2530E3D626823F2B0093F9A9 /* Rx */,
 			);
 			path = "Airports API";
 			sourceTree = "<group>";
@@ -424,6 +444,7 @@
 				2522EC17267B2B50005D2115 /* CityTableViewModel.swift in Sources */,
 				253B2E25266A20580082D9F3 /* SearchCityViewController.swift in Sources */,
 				2522EC0C267A5753005D2115 /* AppDependencyContainer.swift in Sources */,
+				2530E3DB26823FCF0093F9A9 /* RemoteRxAirportsLoader.swift in Sources */,
 				2522E71A2678F140005D2115 /* CityTableViewCell.swift in Sources */,
 				253B2E21266A20580082D9F3 /* AppDelegate.swift in Sources */,
 				25C289892671F0E700787B07 /* SectionOfCustomData.swift in Sources */,
@@ -435,10 +456,13 @@
 				25C2827F266F50E400787B07 /* URLSessionHTTPClient.swift in Sources */,
 				2522EC36267B2F8F005D2115 /* AirportTableViewModel.swift in Sources */,
 				25C28243266F49A700787B07 /* RemoteGeoloc.swift in Sources */,
+				2530E3D226823D3A0093F9A9 /* URLSessionRxHTTPClient.swift in Sources */,
 				25C28275266F4C8E00787B07 /* Geoloc.swift in Sources */,
 				25C2827A266F4CA700787B07 /* ViewModelPresentable.swift in Sources */,
+				2530DEB72681DB6F0093F9A9 /* URLSession+Rx.swift in Sources */,
 				2522E91D2679D720005D2115 /* AirportsViewController.swift in Sources */,
 				2522EC30267B2F7B005D2115 /* AirportTableViewCell.swift in Sources */,
+				2530E3E326830AAB0093F9A9 /* RxHTTPClient.swift in Sources */,
 				25C28269266F4C4200787B07 /* Airport.swift in Sources */,
 				253B2E68266A54CB0082D9F3 /* SearchCityViewModel.swift in Sources */,
 				25C2823E266F499700787B07 /* RemoteAirports.swift in Sources */,

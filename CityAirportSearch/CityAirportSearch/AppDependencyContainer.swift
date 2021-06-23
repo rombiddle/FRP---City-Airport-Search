@@ -26,10 +26,7 @@ final class AppDependencyContainer {
         self.httpClient = httpClient
     }
     
-    func makeSearchCityViewController() -> UIViewController {
-        let url = URL(string: "https://raw.githubusercontent.com/rombiddle/FRP---City-Airport-Search/master/aiports.json")!
-        let loader = RemoteAirportsLoader(url: url, client: httpClient)
-                        
+    func makeSearchCityViewController(loader: AirportsLoader) -> UIViewController {
         let searchCityViewController = SearchCityViewController.make()
         searchCityViewController.viewModel = SearchCityViewModel(client: loader, citySelection: showAirports)
         searchCityViewController.title = "Airports"
